@@ -26,7 +26,7 @@ To view dapp:
 
 Remember to always connect to MetaMask/Ganache before taking any actions via button in top-right corner of UI
 
-## Oracles Server
+## Oracle Server
 
-`npm run server`
+`npm run server`  
 `truffle test ./test/oracles.js`
