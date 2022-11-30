@@ -269,7 +269,8 @@ contract FlightSuretyData {
                 // Debit
                 flights[flightKey].insurances[currentInsuree] = 0;
                 // Credit
-                insureesBalance[currentInsuree] += insuranceValue;
+                // Do 2x payouts to avoid working with decimals
+                insureesBalance[currentInsuree] += insuranceValue.mul(2);
                 totalValueCredited += insuranceValue;
             }
         }
