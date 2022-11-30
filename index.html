@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>FlightSurety</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./src/dapp/flightsurety.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="./src/dapp/index.js" type="module"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">FlightSurety</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html"
+                            >Insurance Purchase
+                            <span class="sr-only">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item active">
+                        <a
+                            class="nav-link"
+                            href="./src/dapp/airlineRegistration.html"
+                            >Airline Registration
+                            <span class="sr-only">(current)</span></a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <button
+                class="btn btn-outline-success"
+                type="button"
+                id="connect-web3"
+            >
+                Connect Web3
+            </button>
+        </nav>
+
+        <main class="container">
+            <h2 style="text-align: center; font-weight: bold">
+                Insurance Purchase
+            </h2>
+            <div class="row top-20">
+                <label class="form">Airline</label>
+                <input
+                    type="text"
+                    id="airline-buyer"
+                    value="0xFEf9e1acC08407C3986378b55F984789B7Ea5775"
+                />
+                <label class="form"> Flight </label>
+                <input type="text" id="flight-number" value="MX0812" />
+                <label class="form"> Time </label>
+                <input type="text" id="flight-time" value="20210215" />
+            </div>
+
+            <div class="row top-20">
+                <btn
+                    class="btn btn-primary"
+                    id="register-flight"
+                    style="margin-left: 2em"
+                    >Register Flight</btn
+                >
+                <btn
+                    class="btn btn-primary"
+                    id="submit-oracle"
+                    style="margin-left: 2em"
+                    >Fetch Flight Status</btn
+                >
+            </div>
+            <br />
+            <br />
+            <div class="row top-20">
+                <label class="form">Insurance Value</label>
+                <input type="text" id="insurance-val" value="1" />ETH
+            </div>
+            <div class="row top-20">
+                <btn
+                    class="btn btn-primary"
+                    id="buy-insurance"
+                    style="margin-left: 2em"
+                    >Buy Insurance</btn
+                >
+                <btn
+                    class="btn btn-primary"
+                    id="withdraw-funds"
+                    style="margin-left: 2em"
+                    >Withdraw Proceeds</btn
+                >
+            </div>
+            <br />
+            <div style="text-align: center">
+                <span id="display-wrapper"></span>
+            </div>
+        </main>
+    </body>
+</html>
