@@ -22,7 +22,7 @@ To run truffle tests:
 
 To view dapp:
 
-`http://localhost:8000`
+`http://localhost:3000`
 
 Remember to always connect to MetaMask/Ganache before taking any actions via button in top-right corner of UI
 
